@@ -33,12 +33,10 @@
       padding:0 20px;
     }
     .nav-inner{max-width:var(--maxw); width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--panel);}
-    .brand h1{font-size:16px;margin:0; letter-spacing:0.2px}
     .menu{display:flex; gap:18px}
     .menu a{color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; padding:8px 10px; border-radius:8px}
     .menu a.active, .menu a:hover{color:var(--white); background:rgba(255,255,255,0.02)}
+    .social-nav{display:flex; gap:12px;}
     main{max-width:var(--maxw); margin:120px auto 60px; padding:24px; display:flex; flex-direction:column; gap:40px;}
     .card{background:var(--panel); padding:28px; border-radius:var(--radius); border-left:4px solid var(--accent);}
     .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
@@ -51,16 +49,14 @@
 <body>
   <nav aria-label="Primary">
     <div class="nav-inner">
-      <div class="brand">
-        <div class="logo" aria-hidden>DD</div>
-        <div>
-          <h1>Dane Dathrego</h1>
-        </div>
-      </div>
       <div class="menu" role="navigation">
         <a href="/" data-link>Home</a>
         <a href="/about" data-link>About</a>
         <a href="/projects" data-link>Projects</a>
+      </div>
+      <div class="social-nav">
+        <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:d.a.dathrego@gmail.com">Email</a>
       </div>
     </div>
   </nav>
