@@ -62,32 +62,60 @@
 
   <main id="app">
     <section id="home">
+      <p style="color:var(--white); font-size:20px; text-align:center; max-width:70ch; margin:0 auto;">
+        Hi, my name is
+      </p>
       <h1 id="name">Dane Dathrego</h1>
-      <p style="color:var(--white); font-size:20px; text-align:center; max-width:70ch; margin:0 auto;">Maker, engineer, and student focused on networking, embedded systems, and applied ML.</p>
+      
     </section>
 
     <section class="card" id="about-section">
       <h2 style="color:var(--accent); margin-top:0">About Me</h2>
-      <p style="color:var(--white); font-size:16px">I'm a computer engineering student graduating in Spring 2026. I enjoy working close to the hardware and understanding how systems communicate — from embedded devices to network protocols. My projects help me explore the edges between software, hardware, and clean interface design.</p>
+      <p style="color:var(--white); font-size:16px">
+        I'm a computer engineering student at Cal Poly SLO graduating 
+        in Spring 2026 with a strong interest in embedded systems, networking,
+        and low-level software. I enjoy working close to the hardware and 
+        understanding how systems communicate — from microcontrollers to 
+        application-level protocols. My projects sit at the intersection of 
+        hardware, software, and clean interface design, where I focus on 
+        building reliable, efficient, and intuitive systems.
+      </p>
+      <p>
+        I'm motivated 
+        by solving real technical problems, learning new tools quickly, 
+        and designing systems that feel cohesive from the bottom up. 
+        I'm always looking for opportunities to grow, collaborate, and 
+        work on technology that bridges the gap between deep technical 
+        implementation and thoughtful user experience.
+      </p>
     </section>
 
     <section class="card" id="projects-section">
       <h2 style="color:var(--accent); margin-top:0">Projects</h2>
       <div class="projects-grid" style="margin-top:12px">
         <article class="proj">
-          <h3 style="color:var(--accent-2)">Packet Sniffer (C)</h3>
-          <div class="tag">Systems</div>
-          <p style="color:var(--white)">A pcap-based packet analyzer for network traffic inspection and protocol parsing.</p>
+          <h3 style="color:var(--accent-2)">Poly1rover Port II</h3>
+          <div class="tag">Embedded Systems</div>
+          <p style="color:var(--white)">Porting a Mars rover system to 
+            a Xilinx Zynq-7020 ROACH platform while implementing SPI-based Wi-Fi, 
+            optimizing the OS for eMMC constraints, integrating an I²C sensor bus,
+             and validating motor control, robotic arm, and vision systems with 
+             software-driven power management and autonomous demo mode.
+          </p>
         </article>
         <article class="proj">
-          <h3 style="color:var(--accent-2)">STM32 Keypad Clock</h3>
-          <div class="tag">Embedded</div>
-          <p style="color:var(--white)">Real-time clock with UART output and keypad input using TIM2 interrupts.</p>
+          <h3 style="color:var(--accent-2)">What's For Dinner?</h3>
+          <div class="tag">WebDev</div>
+          <p style="color:var(--white)">Designed and developed a full-stack web application 
+            using Agile practices, contributing to requirements gathering, UI/UX design, 
+            and sprint execution while implementing features with React, Node.js/Express, 
+            MongoDB, and Jest to support deployment and continuous improvement.
+          </p>
         </article>
         <article class="proj">
-          <h3 style="color:var(--accent-2)">rcopy (UDP)</h3>
+          <h3 style="color:var(--accent-2)">Rcopy</h3>
           <div class="tag">Networks</div>
-          <p style="color:var(--white)">Reliable file transfer using selective-reject ARQ and sliding window buffering.</p>
+          <p style="color:var(--white)">Reliable UDP file transfer using selective-reject ARQ and sliding window buffering.</p>
         </article>
       </div>
     </section>
