@@ -37,7 +37,10 @@
     }
 
     nav {
+        width: 100%;
         position: fixed;
+        top: 0;
+        left: 0;
         text-align: center;
         padding: 20px 20px;
         background: #055e13;
@@ -76,16 +79,18 @@
 <body>
   <nav>
     <a data-link href="#Home">Home</a>
-    <a data-link href="/about">About</a>
-    <a data-link href="/projects">Projects</a>
-    <a data-link href="/experience">Experience</a>
+    <a data-link href="#About">About</a>
+    <a data-link href="#Projects">Projects</a>
   </nav>
   <div id="Home" class="container">
     <div class="section">
-        <h2>Hi. My Name is Dane.</h2>
-        <p>Stuff about me.</p>
+        <h1>Hi. My Name is Dane.</h1>
     </div>
-    <div class="section">
+    <div id="About" class="section">
+        <h2>About Me</h2>
+        <p>STUFF ABOUT ME</p>
+    </div>
+    <div id="Projects" class="section">
         <h2>Projects</h2>
         <p>list my projects</p>
     </div>
