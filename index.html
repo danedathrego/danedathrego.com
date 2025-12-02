@@ -56,46 +56,13 @@
 </head>
 
 <body>
-  <header>
-    <h1>Dane Dathrego</h1>
-    <p>Cal Poly SLO • Graduating Spring 2026</p>
-  </header>
-
-  <div class="container">
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I'm an engineering student interested in networking, embedded systems,
-        and human–AI interaction. I enjoy building clean, thoughtful systems across hardware and software.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li>Networking: UDP file transfer protocol with selective-reject ARQ</li>
-        <li>Embedded: STM32 real-time clock + keypad interface</li>
-        <li>AI Research: Applied analysis of LLM behavior and evaluation</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Experience</h2>
-      <p><strong>AI Research Intern — e2f (2025)</strong><br />
-        Worked on analytical evaluations of LLM behavior, data annotation frameworks, and structured experimentation.</p>
-    </div>
-
-    <div class="section">
-      <h2>Contact</h2>
-      <p>Email: d.a.dathrego@gmail.com</p>
-    </div>
-  </div>
-  <footer>
-    <p>
-      <a href="https://www.linkedin.com/in/danedathrego" target="_blank">LinkedIn</a> •
-      <a href="mailto:d.a.dathrego@gmail.com">Email</a>
-    </p>
-    <p>© 2025 Dane Dathrego</p>
-  </footer>
+  <nav>
+    <a data-link href="/">Home</a>
+    <a data-link href="/about">About</a>
+    <a data-link href="/projects">Projects</a>
+    <a data-link href="/experience">Experience</a>
+  </nav>
+  <main id="app"></main>
+  <script src="scripts/router.js"></script>
 </body>
 </html>
