@@ -1,106 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dane Dathrego</title>
+  <meta name="description" content="Dane Dathrego — projects, about, contact." />
   <style>
-    body {
-      font-family: Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #212224;
-      color: white;
+    :root{
+      /* minimal, muted palette */
+      --bg: #0f1111;          /* deep charcoal */
+      --panel: #161718;       /* slightly lighter */
+      --muted: #bfc8c2;       /* soft warm gray */
+      --accent: #7aa893;      /* muted green (accent) */
+      --accent-2: #93a7b5;    /* secondary subtle blue/gray */
+      --white: #f5f5f4;
+      --maxw: 980px;
+      --radius: 12px;
     }
 
-    header {
-      background: #1d2e28;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #0b0b0b 100%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      -webkit-tap-highlight-color:transparent;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+    /* Top navigation */
+    nav{
+      position:fixed; inset:0 0 auto 0; height:72px; display:flex; align-items:center; justify-content:center;
+      background: rgba(10,12,10,0.4); backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      z-index:40;
+      padding:0 20px;
+    }
+    .nav-inner{max-width:var(--maxw); width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--panel);}
+    .brand h1{font-size:16px;margin:0; letter-spacing:0.2px}
+    .menu{display:flex; gap:18px}
+    .menu a{color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; padding:8px 10px; border-radius:8px}
+    .menu a.active, .menu a:hover{color:var(--white); background:rgba(255,255,255,0.02)}
+
+    /* main layout */
+    main{max-width:var(--maxw); margin:120px auto 60px; padding:24px;}
+
+    .hero{display:grid; gap:18px; grid-template-columns:1fr; align-items:center}
+    .eyebrow{color:var(--muted); font-weight:600; font-size:13px}
+    h2.hero-title{font-size:36px; margin:0; color:var(--white);}
+    p.lead{margin:0; color:var(--muted); max-width:68ch}
+
+    .split{display:grid; grid-template-columns:1fr 320px; gap:28px; margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:var(--radius); border:1px solid rgba(255,255,255,0.03)}
+
+    /* Projects */
+    .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
+    .proj{padding:16px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.03)}
+    .proj h3{margin:0 0 8px 0}
+    .tag{display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; background:rgba(122,168,147,0.12); color:var(--accent); font-weight:700}
+
+    /* About */
+    .about p{color:var(--muted)}
+
+    footer{max-width:var(--maxw); margin:40px auto 60px; padding:20px; color:var(--muted); display:flex; justify-content:space-between; gap:16px; align-items:center}
+    .social a{color:var(--muted); text-decoration:none; margin-left:12px}
+
+    /* responsive tweaks */
+    @media (max-width:880px){
+      .split{grid-template-columns:1fr}
+      nav{height:64px}
+      main{margin-top:100px;padding:18px}
     }
 
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 6px;
-      margin-bottom: 20px;
-    }
+    /* subtle focus states */
+    a:focus{outline:2px solid rgba(122,168,147,0.18); outline-offset:2px}
 
-    .section {
-      margin-bottom: 40px;
-    }
-
-    nav {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        text-align: center;
-        padding: 20px 20px;
-        background: #055e13;
-        word-spacing: 5px;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        text-decoration: none;
-        color: grey;
-    }
-
-    footer {
-      background: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #4da6ff;
-      text-decoration: none;
-    }   
-
-    footer a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
-
 <body>
-  <nav>
-    <a data-link href="#Home">Home</a>
-    <a data-link href="#About">About</a>
-    <a data-link href="#Projects">Projects</a>
+  <nav aria-label="Primary">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden>DD</div>
+        <div>
+          <h1>Dane Dathrego</h1>
+          <div style="font-size:12px;color:var(--muted)">Software / Research / Projects</div>
+        </div>
+      </div>
+
+      <div class="menu" role="navigation">
+        <a href="/" data-link>Home</a>
+        <a href="/about" data-link>About</a>
+        <a href="/projects" data-link>Projects</a>
+      </div>
+    </div>
   </nav>
-  <div id="Home" class="container">
-    <div class="section">
-        <h1>Hi. My Name is Dane.</h1>
-    </div>
-    <div id="About" class="section">
-        <h2>About Me</h2>
-        <p>STUFF ABOUT ME</p>
-    </div>
-    <div id="Projects" class="section">
-        <h2>Projects</h2>
-        <p>list my projects</p>
-    </div>
-  </div>
+
+  <main id="app">
+
+    <section id="home" class="hero">
+      <div class="eyebrow">Hi, I build things.</div>
+      <h2 class="hero-title">Dane Dathrego — maker, engineer, student.</h2>
+      <p class="lead">I design and implement small systems and experiments that help me learn how complex software and hardware interact. I’m graduating in spring 2026 and currently exploring projects in networking, embedded systems, and applied ML.</p>
+
+      <div class="split">
+        <div>
+          <div class="card">
+            <h3>Selected projects</h3>
+            <div class="projects-grid" id="home-projects">
+              <!-- small project cards; swap with your real content -->
+              <article class="proj">
+                <h3>Packet Sniffer (C)</h3>
+                <div class="tag">systems</div>
+                <p style="color:var(--muted);margin-top:8px;font-size:14px">A command-line pcap-based packet analyser for networking class projects.</p>
+              </article>
+
+              <article class="proj">
+                <h3>STM32 Keypad Clock</h3>
+                <div class="tag">embedded</div>
+                <p style="color:var(--muted);margin-top:8px;font-size:14px">Real-time clock on a UART terminal with keypad controls and TIM2 interrupts.</p>
+              </article>
+
+              <article class="proj">
+                <h3>rcopy (UDP)</h3>
+                <div class="tag">networks</div>
+                <p style="color:var(--muted);margin-top:8px;font-size:14px">Reliable file transfer over UDP implementing selective-reject ARQ and sliding window.</p>
+              </article>
+
+            </div>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="card about">
+            <h3>About</h3>
+            <p>I’m a computer engineering student who likes low-level systems, embedded devices, and making clean, minimal interfaces. I enjoy teaching myself new stacks by building small, useful tools.</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h4>Contact</h4>
+            <p style="color:var(--muted);margin:0 0 8px 0">LinkedIn / Email</p>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="mailto:d.a.dathrego@gmail.com">Email</a>
+            </div>
+          </div>
+
+          <div style="height:16px"></div>
+
+          <div class="card">
+            <h4>Quick facts</h4>
+            <ul style="margin:8px 0 0 18px;color:var(--muted);padding:0">
+              <li>Graduating Spring 2026</li>
+              <li>Works with C, embedded C, Linux</li>
+              <li>Interests: networking, embedded, ML</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section id="projects" hidden>
+      <h2>Projects</h2>
+      <div class="projects-grid" style="margin-top:8px">
+        <!-- expand this list with your real projects and links -->
+        <article class="proj card">
+          <h3>Packet Sniffer</h3>
+          <p style="color:var(--muted)">pcap-based packet parser with filters and stats.</p>
+        </article>
+        <article class="proj card">
+          <h3>rcopy</h3>
+          <p style="color:var(--muted)">Custom reliable UDP transfer with selective-reject ARQ.</p>
+        </article>
+        <article class="proj card">
+          <h3>STM32 Keypad Clock</h3>
+          <p style="color:var(--muted)">UART-based clock and keypad interaction demo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" hidden>
+      <h2>About Me</h2>
+      <div class="card" style="margin-top:12px">
+        <p style="color:var(--muted)">I’m studying computer engineering and focus on practical systems projects that let me learn by building. I like clear interfaces, minimal palettes, and code that documents its intent.</p>
+      </div>
+    </section>
+
+  </main>
+
   <footer>
-    <p>
-        <a href="https://www.linkedin.com/in/danedathrego" target="_blank">LinkedIn  </a>      
-        <a href="mailto:d.a.dathrego@gmail.com">  Email</a>
-    </p>
-    <p>© 2025 Dane Dathrego</p>
+    <div>© 2025 Dane Dathrego</div>
+    <div style="text-align:right">
+      <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;•&nbsp;
+      <a href="mailto:d.a.dathrego@gmail.com">Email</a>
+    </div>
   </footer>
+
+  <script>
+    // Minimal client-side routing using the History API (no hashes)
+    const routes = {
+      '/': 'home',
+      '/about': 'about',
+      '/projects': 'projects'
+    };
+
+    function setActiveLink(path){
+      document.querySelectorAll('.menu a').forEach(a=>a.classList.remove('active'));
+      const match = Object.keys(routes).find(k => k === path) || '/';
+      const anchor = document.querySelector('.menu a[href="' + match + '"]');
+      if(anchor) anchor.classList.add('active');
+    }
+
+    function navigate(path, replace=false){
+      const sectionId = routes[path] || 'home';
+      document.querySelectorAll('main > section').forEach(s=> s.hidden = true);
+      const target = document.getElementById(sectionId);
+      if(target) target.hidden = false;
+      if(!replace) history.pushState({path}, '', path);
+      setActiveLink(path);
+      // update title
+      document.title = (sectionId === 'home') ? 'Dane Dathrego' : sectionId[0].toUpperCase() + sectionId.slice(1) + ' — Dane Dathrego';
+      // optional: scroll to top of content
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // intercept nav clicks
+    document.addEventListener('click', e=>{
+      const a = e.target.closest('a[data-link]');
+      if(!a) return;
+      const href = a.getAttribute('href');
+      if(href && href.startsWith('/')){
+        e.preventDefault();
+        navigate(href);
+      }
+    });
+
+    // popstate
+    window.addEventListener('popstate', e=>{
+      const path = location.pathname;
+      const section = routes[path] || 'home';
+      document.querySelectorAll('main > section').forEach(s=> s.hidden = true);
+      const target = document.getElementById(section);
+      if(target) target.hidden = false;
+      setActiveLink(path);
+    });
+
+    // initial load: map pathname to section and replace state
+    (function(){
+      const path = location.pathname in routes ? location.pathname : '/';
+      // ensure only the right section is visible
+      document.querySelectorAll('main > section').forEach(s=> s.hidden = true);
+      const initial = document.getElementById(routes[path]);
+      if(initial) initial.hidden = false;
+      history.replaceState({path}, '', path);
+      setActiveLink(path);
+    })();
+
+  </script>
 </body>
 </html>
