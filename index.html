@@ -7,17 +7,15 @@
   <meta name="description" content="Dane Dathrego — projects, about, contact." />
   <style>
     :root{
-      /* minimal, muted palette */
-      --bg: #0f1111;          /* deep charcoal */
-      --panel: #161718;       /* slightly lighter */
-      --muted: #bfc8c2;       /* soft warm gray */
-      --accent: #7aa893;      /* muted green (accent) */
-      --accent-2: #93a7b5;    /* secondary subtle blue/gray */
+      --bg: #0f1111;
+      --panel: #161718;
+      --muted: #bfc8c2;
+      --accent: #7aa893;
+      --accent-2: #93a7b5;
       --white: #f5f5f4;
       --maxw: 980px;
       --radius: 12px;
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -25,13 +23,8 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       background: linear-gradient(180deg,var(--bg) 0%, #0b0b0b 100%);
       color:var(--white);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
-      -webkit-tap-highlight-color:transparent;
     }
-
-    /* Top navigation */
     nav{
       position:fixed; inset:0 0 auto 0; height:72px; display:flex; align-items:center; justify-content:center;
       background: rgba(10,12,10,0.4); backdrop-filter: blur(6px);
@@ -46,40 +39,13 @@
     .menu{display:flex; gap:18px}
     .menu a{color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; padding:8px 10px; border-radius:8px}
     .menu a.active, .menu a:hover{color:var(--white); background:rgba(255,255,255,0.02)}
-
-    /* main layout */
-    main{max-width:var(--maxw); margin:120px auto 60px; padding:24px;}
-
-    .hero{display:grid; gap:18px; grid-template-columns:1fr; align-items:center}
-    .eyebrow{color:var(--muted); font-weight:600; font-size:13px}
-    h2.hero-title{font-size:36px; margin:0; color:var(--white);}
-    p.lead{margin:0; color:var(--muted); max-width:68ch}
-
-    .split{display:grid; grid-template-columns:1fr 320px; gap:28px; margin-top:28px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:var(--radius); border:1px solid rgba(255,255,255,0.03)}
-
-    /* Projects */
+    main{max-width:var(--maxw); margin:120px auto 60px; padding:24px; display:flex; flex-direction:column; gap:40px;}
+    .card{background:var(--panel); padding:28px; border-radius:var(--radius); border-left:4px solid var(--accent);}
     .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
-    .proj{padding:16px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.03)}
-    .proj h3{margin:0 0 8px 0}
+    .proj{padding:16px; border-radius:var(--radius); background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.03)}
     .tag{display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; background:rgba(122,168,147,0.12); color:var(--accent); font-weight:700}
-
-    /* About */
-    .about p{color:var(--muted)}
-
     footer{max-width:var(--maxw); margin:40px auto 60px; padding:20px; color:var(--muted); display:flex; justify-content:space-between; gap:16px; align-items:center}
-    .social a{color:var(--muted); text-decoration:none; margin-left:12px}
-
-    /* responsive tweaks */
-    @media (max-width:880px){
-      .split{grid-template-columns:1fr}
-      nav{height:64px}
-      main{margin-top:100px;padding:18px}
-    }
-
-    /* subtle focus states */
-    a:focus{outline:2px solid rgba(122,168,147,0.18); outline-offset:2px}
-
+    .social a{color:var(--accent-2); text-decoration:none; margin-left:12px}
   </style>
 </head>
 <body>
@@ -89,10 +55,8 @@
         <div class="logo" aria-hidden>DD</div>
         <div>
           <h1>Dane Dathrego</h1>
-          <div style="font-size:12px;color:var(--muted)">Software / Research / Projects</div>
         </div>
       </div>
-
       <div class="menu" role="navigation">
         <a href="/" data-link>Home</a>
         <a href="/about" data-link>About</a>
@@ -102,54 +66,46 @@
   </nav>
 
   <main id="app">
-
-    <section id="home" class="hero" style="display:flex;flex-direction:column;gap:32px;align-items:flex-start;">
-      <div class="eyebrow" style="color:var(--accent); font-weight:700; font-size:14px">Welcome</div>
-      <h2 class="hero-title" style="font-size:48px; font-weight:800; color:var(--white); margin:0;">Dane Dathrego</h2>
-      <p class="lead" style="font-size:18px; color:var(--muted); max-width:70ch;">Maker, engineer, and student focused on networking, embedded systems, and applied machine learning. I like building small systems that teach me something real.</p>
+    <section id="home">
+      <h1 style="font-size:48px; color:var(--accent); margin-bottom:16px">Dane Dathrego</h1>
+      <p style="color:var(--muted); font-size:18px; max-width:70ch;">Maker, engineer, and student focused on networking, embedded systems, and applied ML.</p>
     </section>
 
-    <div style="height:40px"></div>
-
-    <section id="about-section" class="card" style="padding:28px; border-left:4px solid var(--accent);">
-      <h2 style="margin-top:0; color:var(--accent)">About Me</h2>
-      <p style="color:var(--muted); font-size:16px;">I'm a computer engineering student graduating in Spring 2026. I enjoy working close to the hardware and understanding how systems communicate — from embedded devices to network protocols. My projects help me explore the edges between software, hardware, and clean interface design.</p>
+    <section class="card" id="about-section">
+      <h2 style="color:var(--accent); margin-top:0">About Me</h2>
+      <p style="color:var(--muted); font-size:16px">I'm a computer engineering student graduating in Spring 2026. I enjoy working close to the hardware and understanding how systems communicate — from embedded devices to network protocols. My projects help me explore the edges between software, hardware, and clean interface design.</p>
     </section>
 
-    <div style="height:40px"></div>
-
-    <section id="projects-section" class="card" style="padding:28px; border-left:4px solid var(--accent-2);">
-      <h2 style="margin-top:0; color:var(--accent-2)">Projects</h2>
-      <div class="projects-grid" style="margin-top:18px;">
+    <section class="card" id="projects-section">
+      <h2 style="color:var(--accent); margin-top:0">Projects</h2>
+      <div class="projects-grid" style="margin-top:12px">
         <article class="proj">
-          <h3 style="color:var(--accent)">Packet Sniffer (C)</h3>
+          <h3 style="color:var(--accent-2)">Packet Sniffer (C)</h3>
+          <div class="tag">Systems</div>
           <p style="color:var(--muted)">A pcap-based packet analyzer for network traffic inspection and protocol parsing.</p>
         </article>
-
         <article class="proj">
-          <h3 style="color:var(--accent)">STM32 Keypad Clock</h3>
+          <h3 style="color:var(--accent-2)">STM32 Keypad Clock</h3>
+          <div class="tag">Embedded</div>
           <p style="color:var(--muted)">Real-time clock with UART output and keypad input using TIM2 interrupts.</p>
         </article>
-
         <article class="proj">
-          <h3 style="color:var(--accent)">rcopy (UDP)</h3>
+          <h3 style="color:var(--accent-2)">rcopy (UDP)</h3>
+          <div class="tag">Networks</div>
           <p style="color:var(--muted)">Reliable file transfer using selective-reject ARQ and sliding window buffering.</p>
         </article>
       </div>
     </section>
 
-    <div style="height:40px"></div>
-
-    <section id="contact-section" class="card" style="padding:28px; border-left:4px solid var(--accent);">
-      <h2 style="margin-top:0; color:var(--accent)">Contact</h2>
-      <p style="color:var(--muted)">Feel free to reach out on LinkedIn or by email.</p>
-      <div class="social" style="margin-top:12px;">
-        <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener" style="color:var(--accent-2)">LinkedIn</a>
+    <section class="card" id="contact-section">
+      <h2 style="color:var(--accent); margin-top:0">Contact</h2>
+      <p style="color:var(--muted)">Reach out via LinkedIn or email.</p>
+      <div class="social" style="margin-top:12px">
+        <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
         &nbsp;•&nbsp;
-        <a href="mailto:d.a.dathrego@gmail.com" style="color:var(--accent-2)">Email</a>
+        <a href="mailto:d.a.dathrego@gmail.com">Email</a>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -160,67 +116,5 @@
       <a href="mailto:d.a.dathrego@gmail.com">Email</a>
     </div>
   </footer>
-
-  <script>
-    // Minimal client-side routing using the History API (no hashes)
-    const routes = {
-      '/': 'home',
-      '/about': 'about',
-      '/projects': 'projects'
-    };
-
-    function setActiveLink(path){
-      document.querySelectorAll('.menu a').forEach(a=>a.classList.remove('active'));
-      const match = Object.keys(routes).find(k => k === path) || '/';
-      const anchor = document.querySelector('.menu a[href="' + match + '"]');
-      if(anchor) anchor.classList.add('active');
-    }
-
-    function navigate(path, replace=false){
-      const sectionId = routes[path] || 'home';
-      document.querySelectorAll('main > section').forEach(s=> s.hidden = true);
-      const target = document.getElementById(sectionId);
-      if(target) target.hidden = false;
-      if(!replace) history.pushState({path}, '', path);
-      setActiveLink(path);
-      // update title
-      document.title = (sectionId === 'home') ? 'Dane Dathrego' : sectionId[0].toUpperCase() + sectionId.slice(1) + ' — Dane Dathrego';
-      // optional: scroll to top of content
-      window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-
-    // intercept nav clicks
-    document.addEventListener('click', e=>{
-      const a = e.target.closest('a[data-link]');
-      if(!a) return;
-      const href = a.getAttribute('href');
-      if(href && href.startsWith('/')){
-        e.preventDefault();
-        navigate(href);
-      }
-    });
-
-    // popstate
-    window.addEventListener('popstate', e=>{
-      const path = location.pathname;
-      const section = routes[path] || 'home';
-      document.querySelectorAll('main > section').forEach(s=> s.hidden = true);
-      const target = document.getElementById(section);
-      if(target) target.hidden = false;
-      setActiveLink(path);
-    });
-
-    // initial load: map pathname to section and replace state
-    (function(){
-      const path = location.pathname in routes ? location.pathname : '/';
-      // ensure only the right section is visible
-      document.querySelectorAll('main > section').forEach(s=> s.hidden = true);
-      const initial = document.getElementById(routes[path]);
-      if(initial) initial.hidden = false;
-      history.replaceState({path}, '', path);
-      setActiveLink(path);
-    })();
-
-  </script>
 </body>
 </html>
