@@ -103,94 +103,50 @@
 
   <main id="app">
 
-    <section id="home" class="hero">
-      <div class="eyebrow">Hi, I build things.</div>
-      <h2 class="hero-title">Dane Dathrego — maker, engineer, student.</h2>
-      <p class="lead">I design and implement small systems and experiments that help me learn how complex software and hardware interact. I’m graduating in spring 2026 and currently exploring projects in networking, embedded systems, and applied ML.</p>
-
-      <div class="split">
-        <div>
-          <div class="card">
-            <h3>Selected projects</h3>
-            <div class="projects-grid" id="home-projects">
-              <!-- small project cards; swap with your real content -->
-              <article class="proj">
-                <h3>Packet Sniffer (C)</h3>
-                <div class="tag">systems</div>
-                <p style="color:var(--muted);margin-top:8px;font-size:14px">A command-line pcap-based packet analyser for networking class projects.</p>
-              </article>
-
-              <article class="proj">
-                <h3>STM32 Keypad Clock</h3>
-                <div class="tag">embedded</div>
-                <p style="color:var(--muted);margin-top:8px;font-size:14px">Real-time clock on a UART terminal with keypad controls and TIM2 interrupts.</p>
-              </article>
-
-              <article class="proj">
-                <h3>rcopy (UDP)</h3>
-                <div class="tag">networks</div>
-                <p style="color:var(--muted);margin-top:8px;font-size:14px">Reliable file transfer over UDP implementing selective-reject ARQ and sliding window.</p>
-              </article>
-
-            </div>
-          </div>
-
-          <div style="height:18px"></div>
-
-          <div class="card about">
-            <h3>About</h3>
-            <p>I’m a computer engineering student who likes low-level systems, embedded devices, and making clean, minimal interfaces. I enjoy teaching myself new stacks by building small, useful tools.</p>
-          </div>
-        </div>
-
-        <aside>
-          <div class="card">
-            <h4>Contact</h4>
-            <p style="color:var(--muted);margin:0 0 8px 0">LinkedIn / Email</p>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="mailto:d.a.dathrego@gmail.com">Email</a>
-            </div>
-          </div>
-
-          <div style="height:16px"></div>
-
-          <div class="card">
-            <h4>Quick facts</h4>
-            <ul style="margin:8px 0 0 18px;color:var(--muted);padding:0">
-              <li>Graduating Spring 2026</li>
-              <li>Works with C, embedded C, Linux</li>
-              <li>Interests: networking, embedded, ML</li>
-            </ul>
-          </div>
-        </aside>
-
-      </div>
+    <section id="home" class="hero" style="display:flex;flex-direction:column;gap:32px;align-items:flex-start;">
+      <div class="eyebrow" style="color:var(--accent); font-weight:700; font-size:14px">Welcome</div>
+      <h2 class="hero-title" style="font-size:48px; font-weight:800; color:var(--white); margin:0;">Dane Dathrego</h2>
+      <p class="lead" style="font-size:18px; color:var(--muted); max-width:70ch;">Maker, engineer, and student focused on networking, embedded systems, and applied machine learning. I like building small systems that teach me something real.</p>
     </section>
 
-    <section id="projects" hidden>
-      <h2>Projects</h2>
-      <div class="projects-grid" style="margin-top:8px">
-        <!-- expand this list with your real projects and links -->
-        <article class="proj card">
-          <h3>Packet Sniffer</h3>
-          <p style="color:var(--muted)">pcap-based packet parser with filters and stats.</p>
+    <div style="height:40px"></div>
+
+    <section id="about-section" class="card" style="padding:28px; border-left:4px solid var(--accent);">
+      <h2 style="margin-top:0; color:var(--accent)">About Me</h2>
+      <p style="color:var(--muted); font-size:16px;">I'm a computer engineering student graduating in Spring 2026. I enjoy working close to the hardware and understanding how systems communicate — from embedded devices to network protocols. My projects help me explore the edges between software, hardware, and clean interface design.</p>
+    </section>
+
+    <div style="height:40px"></div>
+
+    <section id="projects-section" class="card" style="padding:28px; border-left:4px solid var(--accent-2);">
+      <h2 style="margin-top:0; color:var(--accent-2)">Projects</h2>
+      <div class="projects-grid" style="margin-top:18px;">
+        <article class="proj">
+          <h3 style="color:var(--accent)">Packet Sniffer (C)</h3>
+          <p style="color:var(--muted)">A pcap-based packet analyzer for network traffic inspection and protocol parsing.</p>
         </article>
-        <article class="proj card">
-          <h3>rcopy</h3>
-          <p style="color:var(--muted)">Custom reliable UDP transfer with selective-reject ARQ.</p>
+
+        <article class="proj">
+          <h3 style="color:var(--accent)">STM32 Keypad Clock</h3>
+          <p style="color:var(--muted)">Real-time clock with UART output and keypad input using TIM2 interrupts.</p>
         </article>
-        <article class="proj card">
-          <h3>STM32 Keypad Clock</h3>
-          <p style="color:var(--muted)">UART-based clock and keypad interaction demo.</p>
+
+        <article class="proj">
+          <h3 style="color:var(--accent)">rcopy (UDP)</h3>
+          <p style="color:var(--muted)">Reliable file transfer using selective-reject ARQ and sliding window buffering.</p>
         </article>
       </div>
     </section>
 
-    <section id="about" hidden>
-      <h2>About Me</h2>
-      <div class="card" style="margin-top:12px">
-        <p style="color:var(--muted)">I’m studying computer engineering and focus on practical systems projects that let me learn by building. I like clear interfaces, minimal palettes, and code that documents its intent.</p>
+    <div style="height:40px"></div>
+
+    <section id="contact-section" class="card" style="padding:28px; border-left:4px solid var(--accent);">
+      <h2 style="margin-top:0; color:var(--accent)">Contact</h2>
+      <p style="color:var(--muted)">Feel free to reach out on LinkedIn or by email.</p>
+      <div class="social" style="margin-top:12px;">
+        <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener" style="color:var(--accent-2)">LinkedIn</a>
+        &nbsp;•&nbsp;
+        <a href="mailto:d.a.dathrego@gmail.com" style="color:var(--accent-2)">Email</a>
       </div>
     </section>
 
