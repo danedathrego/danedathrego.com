@@ -7,7 +7,7 @@ const navigateTo = url => {
 
 const routes = [
     { path: "/", view: "/pages/home.html" },
-    { path: "/about", view: "/pages/about.html:" },
+    { path: "/about", view: "/pages/about.html" },
     { path: "/projects", view: "/pages/projects.html" },
     { path: "/experience", view: "/pages/experience.html" }
 ];
