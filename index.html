@@ -4,13 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dane Dathrego</title>
+  <meta name="description" content="Dane Dathrego — projects, about, contact." />
   <style>
     :root{
-      --bg: #212224;
-      --panel: #18392b;
-      --muted: #1d2e28;
-      --accent: #0f5132;
-      --accent-2: #0a5c36;
+      --bg: #0f1111;
+      --panel: #161718;
+      --muted: #e0e0e0;
+      --accent: #7aa893;
+      --accent-2: #93a7b5;
       --white: #f5f5f4;
       --maxw: 980px;
       --radius: 12px;
@@ -20,63 +21,54 @@
     body{
       margin:0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:var(--bg);
+      background: linear-gradient(180deg,var(--bg) 0%, #0b0b0b 100%);
       color:var(--white);
-      line-height:1.45;
+      line-height:1.6;
     }
     nav{
-      position:fixed; inset:0 0 auto 0; height:72px; display:flex; align-items:center; justify-content:center;
+      position:fixed; inset:0 0 auto 0; height:72px; display:flex; align-items:center; justify-content:space-between;
       background: rgba(10,12,10,0.4); backdrop-filter: blur(6px);
-      border-bottom:1px solid rgba(255,255,255,0.03);
+      border-bottom:1px solid rgba(255,255,255,0.05);
       z-index:40;
-      padding:0 20px;
+      padding:0 24px;
     }
-    .nav-inner{max-width:var(--maxw); width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px}
     .menu{display:flex; gap:18px}
-    .menu a{color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; padding:8px 10px; border-radius:8px}
-    .menu a.active, .menu a:hover{color:var(--white); background:rgba(255,255,255,0.02)}
+    .menu a{color:var(--white); text-decoration:none; font-weight:600; font-size:15px; padding:8px 10px; border-radius:8px}
+    .menu a.active, .menu a:hover{color:var(--accent); background:rgba(255,255,255,0.05)}
     .social-nav{display:flex; gap:12px;}
+    .social-nav img{width:24px; height:24px; filter:invert(1); cursor:pointer;}
     main{max-width:var(--maxw); margin:120px auto 60px; padding:24px; display:flex; flex-direction:column; gap:40px;}
+    h1#name{font-size:72px; color:var(--accent); text-align:center; margin-bottom:16px;}
     .card{background:var(--panel); padding:28px; border-radius:var(--radius); border-left:4px solid var(--accent);}
     .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
-    .proj{padding:16px; border-radius:var(--radius); background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.03)}
-    .tag{display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; background:rgba(122,168,147,0.12); color:var(--accent); font-weight:700}
+    .proj{padding:16px; border-radius:var(--radius); background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.05)}
+    .tag{display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; background:rgba(122,168,147,0.15); color:var(--accent); font-weight:700}
     footer{max-width:var(--maxw); margin:40px auto 60px; padding:20px; color:var(--muted); display:flex; justify-content:space-between; gap:16px; align-items:center}
     .social a{color:var(--accent-2); text-decoration:none; margin-left:12px}
   </style>
 </head>
-
 <body>
   <nav aria-label="Primary">
-    <div class="nav-inner">
-      <div class="menu" role="navigation">
-        <a href="/" data-link>Home</a>
-        <a href="/about" data-link>About</a>
-        <a href="/projects" data-link>Projects</a>
-      </div>
-      <div class="social-nav">
-        <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:d.a.dathrego@gmail.com">Email</a>
-      </div>
+    <div class="menu" role="navigation">
+      <a href="/" data-link>Home</a>
+      <a href="/about" data-link>About</a>
+      <a href="/projects" data-link>Projects</a>
+    </div>
+    <div class="social-nav">
+      <a href="https://www.linkedin.com/in/danedathrego" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"/></a>
+      <a href="mailto:d.a.dathrego@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"/></a>
     </div>
   </nav>
 
   <main id="app">
     <section id="home">
-      <h1 style="font-size:48px; color:var(--accent); margin-bottom:16px">Dane Dathrego</h1>
-      <p style="color:var(--muted); font-size:18px; max-width:70ch;">
-        Maker, engineer, and student focused on networking, embedded systems, and applied ML.
-      </p>
+      <h1 id="name">Dane Dathrego</h1>
+      <p style="color:var(--white); font-size:20px; text-align:center; max-width:70ch; margin:0 auto;">Maker, engineer, and student focused on networking, embedded systems, and applied ML.</p>
     </section>
 
     <section class="card" id="about-section">
       <h2 style="color:var(--accent); margin-top:0">About Me</h2>
-      <p style="color:var(--muted); font-size:16px">
-        I'm a computer engineering student graduating in Spring 2026. 
-        I enjoy working close to the hardware and understanding how systems communicate — 
-        from embedded devices to network protocols. My projects help me explore the 
-        edges between software, hardware, and clean interface design.
-      </p>
+      <p style="color:var(--white); font-size:16px">I'm a computer engineering student graduating in Spring 2026. I enjoy working close to the hardware and understanding how systems communicate — from embedded devices to network protocols. My projects help me explore the edges between software, hardware, and clean interface design.</p>
     </section>
 
     <section class="card" id="projects-section">
@@ -85,40 +77,34 @@
         <article class="proj">
           <h3 style="color:var(--accent-2)">Packet Sniffer (C)</h3>
           <div class="tag">Systems</div>
-          <p style="color:var(--white)">A pcap-based packet analyzer 
-            for network traffic inspection and protocol parsing.
-          </p>
+          <p style="color:var(--white)">A pcap-based packet analyzer for network traffic inspection and protocol parsing.</p>
         </article>
         <article class="proj">
           <h3 style="color:var(--accent-2)">STM32 Keypad Clock</h3>
           <div class="tag">Embedded</div>
-          <p style="color:var(--muted)">Real-time clock with 
-            UART output and keypad input using TIM2 interrupts.
-          </p>
+          <p style="color:var(--white)">Real-time clock with UART output and keypad input using TIM2 interrupts.</p>
         </article>
         <article class="proj">
           <h3 style="color:var(--accent-2)">rcopy (UDP)</h3>
           <div class="tag">Networks</div>
-          <p style="color:var(--white)">Reliable file transfer 
-            using selective-reject ARQ and sliding window buffering.
-          </p>
+          <p style="color:var(--white)">Reliable file transfer using selective-reject ARQ and sliding window buffering.</p>
         </article>
       </div>
     </section>
 
     <section class="card" id="contact-section">
       <h2 style="color:var(--accent); margin-top:0">Contact</h2>
-      <p style="color:var(--muted)">Reach out via LinkedIn or email.</p>
-      <div class="social" style="margin-top:12px">
-        <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
-        &nbsp;•&nbsp;
-        <a href="mailto:d.a.dathrego@gmail.com">Email</a>
-      </div>
+      <p style="color:var(--white)">Reach out via LinkedIn or email.</p>
     </section>
   </main>
 
   <footer>
     <div>© 2025 Dane Dathrego</div>
+    <div style="text-align:right">
+      <a href="https://www.linkedin.com/in/danedathrego" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;•&nbsp;
+      <a href="mailto:d.a.dathrego@gmail.com">Email</a>
+    </div>
   </footer>
 </body>
 </html>
