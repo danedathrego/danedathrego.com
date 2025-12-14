@@ -15,6 +15,7 @@ h2 {
 
 .link-row {
     background-color: blue;
+    display: inline;
 }
 
 .link-col {
