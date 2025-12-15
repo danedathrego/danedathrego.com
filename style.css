@@ -23,7 +23,7 @@ body {
     object-fit: cover;
     object-position: center;
     /* border:1px solid orange; */
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(230, 255, 230, 0.2);
     border-radius: 50%;
 }
 
@@ -48,15 +48,15 @@ body {
     display: inline-block;
     width: auto;
     height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(230, 255, 230, 0.2);
     border-radius: 50%;
     justify-content: center;
     padding: 5px;
 }
 
 .link-col:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: black;
+    background-color: rgba(230, 255, 230, 0.2);
+    border-color: rgb(8, 25, 11);
 }
 
 .link-item a {
