@@ -17,6 +17,12 @@ body {
     height: 100dvh;
 }
 
+.title-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
     text-align: center;
 }
@@ -26,9 +32,11 @@ h2 {
 }
 
 .link-row {
-    display: inline;
-    width: 40%;
-    height: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 70%;
 }
 
 .link-col {
