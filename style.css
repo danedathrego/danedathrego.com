@@ -33,6 +33,11 @@ h2 {
     border-radius: 20px;
 }
 
+.link-col:hover {
+    border-color: #DDD;
+    background-color: grey;
+}
+
 .link-item a {
     color: white;
     text-decoration: none;
