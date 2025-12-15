@@ -3,6 +3,10 @@ body {
     background-color: black;
     color: white;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
 }
 
 h1 {
