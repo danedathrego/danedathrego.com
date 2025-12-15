@@ -27,7 +27,7 @@ h2 {
     display: inline-block;
     width: auto;
     height: auto;
-    border: 1px solid white;
+    border: 0.2px solid white;
     padding: 5px 10px;
     justify-content: center;
     border-radius: 20px;
@@ -35,7 +35,6 @@ h2 {
 
 .link-col:hover {
     border-color: #DDD;
-    background-color: grey;
 }
 
 .link-item a {
