@@ -4,7 +4,6 @@ html, body {
     height: 100%;
 }
 
-
 body {
     font-family: Montserrat, Helvetica, sans-serif;
     background-color: rgb(8, 25, 11);
@@ -17,11 +16,22 @@ body {
     height: 100dvh;
 }
 
+.cropped-image {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border:1px solid orange;
+    border-radius: 50%;
+}
+
 .title-container {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+    border: 1px solid yellow;
 }
 
 .link-row {
@@ -29,7 +39,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
-    max-width: 100%;
+    max-width: 70%;
+    border: 1px solid red
 }
 
 .link-col {
