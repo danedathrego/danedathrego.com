@@ -14,13 +14,15 @@ h2 {
 }
 
 .link-row {
-    background-color: blue;
     display: inline;
+    width: 40%;
+    height: auto;
 }
 
 .link-col {
-    background-color: red;
-    display: inline;
+    display: inline-block;
+    width: auto;
+    height: auto;
 }
 
 .link-item a {
@@ -28,5 +30,5 @@ h2 {
 }
 
 .link-item a:hover {
-    color: whitesmoke;
+    color: #EEE;
 }
