@@ -22,7 +22,7 @@ body {
     height: 150px;
     object-fit: cover;
     object-position: center;
-    border:1px solid orange;
+    /* border:1px solid orange; */
     border-radius: 50%;
 }
 
@@ -31,7 +31,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 .link-row {
@@ -40,7 +40,7 @@ body {
     justify-content: center;
     gap: 12px;
     max-width: 80%;
-    border: 1px solid red
+    /* border: 1px solid red */
 }
 
 .link-col {
