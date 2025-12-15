@@ -1,7 +1,7 @@
 body {
-    font-family: sans-serif, 'Courier New', Courier, monospace;
+    font-family: Montserrat, Helvetica, sans-serif;
     background-color: rgb(8, 25, 11);
-    color: rgb(204, 224, 206);
+    color: rgb(230, 255, 230);
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -17,10 +17,15 @@ h2 {
     text-align: center;
 }
 
+.title-container {
+    border: 1px solid yellow;
+}
+
 .link-row {
     display: inline;
     width: 40%;
     height: auto;
+    border: 1px solid red;
 }
 
 .link-col {
@@ -39,7 +44,7 @@ h2 {
 }
 
 .link-item a {
-    color: rgb(204, 224, 206);
+    color: rgb(230, 255, 230);
     text-decoration: none;
     font-size: 18px;
     align-items: center;
