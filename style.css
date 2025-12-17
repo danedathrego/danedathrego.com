@@ -46,6 +46,10 @@ body {
     color: rgba(230, 255, 230, 0.5);
 }
 
+.navbar-item a:focus {
+    color: rgb(230, 255, 230);
+}
+
 .navbar-item a:active {
     color: rgb(230, 255, 230);
 }
