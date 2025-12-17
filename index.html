@@ -12,6 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
   </head>
   <body>
+    <script>
+      const redirect = sessionStorage.redirect;
+      if (redirect) {
+        sessionStorage.removeItem("redirect");
+        history.replaceState(null, null, redirect);
+      }
+    </script>    
     <ul class="navbar">
       <li class="navbar-item"><a data-link href="/">Home</a></li>
       <li class="navbar-item"><a data-link href="/about">About</a></li>
