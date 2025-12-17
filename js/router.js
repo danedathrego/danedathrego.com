@@ -4,8 +4,8 @@ const navigateTo = url => {
 };
 
 const routes = [
-    { path: "/", view: "~/pages/home.html" },
-    { path: "/about", view: "~/pages/about.html" },
+    { path: "/", view: "/pages/home.html" },
+    { path: "/about", view: "/pages/about.html" },
 ];
 
 const matchRoute = () => {
