@@ -109,27 +109,64 @@ img {
 
 /* FORM STUFF */
 
+.contact-container {
+    margin-top: 20dvh;
+    width: 50dvw;
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    /* border: 1px solid yellow; */
+    font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+#contact-me {
+    font-family: BBH Bartle, Montserrat, Helvetica, sans-serif;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 12px;
-    width: 300px;
-    max-width: 80vw;
+    /* border: 1px solid red; */
+    font-family: Montserrat, Helvetica, sans-serif;
+    width: 100%;
 }
 
-.contact-form input,
-.contact-form textarea {
-    background-color: transparent;
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+}
+
+
+.contact-form input {
+    background-color: rgba(230, 255, 230, 0.01);
     border: 1px solid rgba(230, 255, 230, 0.2);
+    border-radius: 8px;
     color: rgb(230, 255, 230);
     padding: 8px 10px;
     font-family: inherit;
     font-size: 14px;
+    flex: 1 1 45%;
+    min-width: 200px;
+    box-sizing: border-box;
 }
+
 
 .contact-form textarea {
     min-height: 120px;
     resize: vertical;
+    background-color: rgba(230, 255, 230, 0.01);
+    border: 1px solid rgba(230, 255, 230, 0.2);
+    border-radius: 8px;
+    color: rgb(230, 255, 230);
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    width: 97%;
 }
 
 .contact-form input::placeholder,
@@ -146,10 +183,12 @@ img {
 .contact-form button {
     background-color: transparent;
     border: 1px solid rgba(230, 255, 230, 0.4);
+    border-radius: 8px;
     color: rgb(230, 255, 230);
     padding: 8px;
     cursor: pointer;
-    font-family: inherit;
+    font-family: "BBH Bartle", "Montserrat", Helvetica, sans-serif;
+    width: auto;
 }
 
 .contact-form button:hover {
