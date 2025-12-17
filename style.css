@@ -111,11 +111,12 @@ img {
 
 .contact-container {
     margin-top: 20dvh;
-    width: 50dvw;
-    display: inline-flex;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
     flex-direction: column;
+    align-items: stretch;
     padding-bottom: 20px;
-    /* border: 1px solid yellow; */
     font-family: "Montserrat", Helvetica, sans-serif;
 }
 
@@ -126,11 +127,9 @@ img {
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 12px;
-    /* border: 1px solid red; */
-    font-family: Montserrat, Helvetica, sans-serif;
     width: 100%;
+    font-family: Montserrat, Helvetica, sans-serif;
 }
 
 .input-container {
@@ -138,35 +137,34 @@ img {
     flex-wrap: wrap;
     gap: 12px;
     width: 100%;
-}
-
-
-.contact-form input {
-    background-color: rgba(230, 255, 230, 0.01);
-    border: 1px solid rgba(230, 255, 230, 0.2);
-    border-radius: 8px;
-    color: rgb(230, 255, 230);
-    padding: 8px 10px;
-    font-family: inherit;
-    font-size: 14px;
-    flex: 1 1 45%;
-    min-width: 200px;
     box-sizing: border-box;
 }
 
-
-.contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-    background-color: rgba(230, 255, 230, 0.01);
-    border: 1px solid rgba(230, 255, 230, 0.2);
+.contact-form input {
+    flex: 1 1 calc(50% - 6px); /* half width minus half gap */
+    min-width: 200px;           /* avoid too small */
+    padding: 8px 10px;
     border-radius: 8px;
+    border: 1px solid rgba(230, 255, 230, 0.2);
+    background-color: rgba(230, 255, 230, 0.01);
     color: rgb(230, 255, 230);
-    padding-top: 8px;
-    padding-bottom: 10px;
     font-family: inherit;
     font-size: 14px;
-    width: 97%;
+    box-sizing: border-box;     /* include padding & border */
+}
+
+.contact-form textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(230, 255, 230, 0.2);
+    background-color: rgba(230, 255, 230, 0.01);
+    color: rgb(230, 255, 230);
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 .contact-form input::placeholder,
@@ -181,22 +179,19 @@ img {
 }
 
 .contact-form button {
-    background-color: transparent;
-    border: 1px solid rgba(230, 255, 230, 0.4);
-    border-radius: 8px;
-    color: rgb(230, 255, 230);
-    padding: 8px;
-    cursor: pointer;
-    font-family: "BBH Bartle", "Montserrat", Helvetica, sans-serif;
     width: auto;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(230, 255, 230, 0.4);
+    background-color: transparent;
+    color: rgb(230, 255, 230);
+    font-family: "BBH Bartle", "Montserrat", Helvetica, sans-serif;
+    cursor: pointer;
+    box-sizing: border-box;
+    align-self: center;
 }
 
 .contact-form button:hover {
     background-color: rgba(230, 255, 230, 0.2);
 }
 
-#form-status {
-    font-size: 12px;
-    margin-top: 8px;
-    opacity: 0.8;
-}
