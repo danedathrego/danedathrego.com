@@ -29,3 +29,41 @@ document.addEventListener("click", e => {
 
 window.addEventListener("popstate", router);
 window.addEventListener("DOMContentLoaded", router);
+
+document.addEventListener('submit', async (e) => {
+    const form = e.target;
+
+    if (!form.matches('#form')) return;
+
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('[type="submit"]');
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+
+    try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert(data.message || "Submission failed");
+        }
+    } catch (err) {
+        console.error(err);
+        alert("Network error");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
