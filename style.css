@@ -51,7 +51,7 @@ body {
 }
 
 .title-container {
-    margin-top: 20dvh;
+    margin-top: 25dvh;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -122,6 +122,7 @@ img {
 
 #contact-me {
     font-family: BBH Bartle, Montserrat, Helvetica, sans-serif;
+    margin-bottom: 10px;
 }
 
 .contact-form {
@@ -141,8 +142,8 @@ img {
 }
 
 .contact-form input {
-    flex: 1 1 calc(50% - 6px); /* half width minus half gap */
-    min-width: 200px;           /* avoid too small */
+    flex: 1 1 calc(50% - 6px);
+    min-width: 200px;
     padding: 8px 10px;
     border-radius: 8px;
     border: 1px solid rgba(230, 255, 230, 0.2);
@@ -150,7 +151,7 @@ img {
     color: rgb(230, 255, 230);
     font-family: inherit;
     font-size: 14px;
-    box-sizing: border-box;     /* include padding & border */
+    box-sizing: border-box;
 }
 
 .contact-form textarea {
