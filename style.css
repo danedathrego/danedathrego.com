@@ -8,12 +8,50 @@ body {
     font-family: "BBH Bartle", "Montserrat", Helvetica, sans-serif;
     background-color: rgb(8, 25, 11);
     color: rgb(230, 255, 230);
+    min-height: 100dvh;
+    height: 100dvh;
+    border: 1px solid red
+}
+
+.page-container {
+    border: 1px solid green;
     text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
-    min-height: 100dvh;
-    height: 100dvh;
+}
+
+.navbar {
+    list-style-type: none;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid blue;
+    display: flex;
+}
+
+.navbar-item {
+    margin: 10px;
+    width: auto;
+    height: auto;
+}
+
+.navbar-item a {
+    color: rgb(230, 255, 230);
+    text-decoration: none;
+}
+
+.navbar-item a:hover {
+    color: rgba(230, 255, 230, 0.5);
+}
+
+.title-container {
+    margin-top: 20%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border: 1px solid yellow;
 }
 
 .cropped-image {
@@ -26,22 +64,13 @@ body {
     border-radius: 50%;
 }
 
-.title-container {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    margin-bottom: 50px;
-    /* border: 1px solid yellow; */
-}
-
 .link-row {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
     max-width: 80%;
-    /* border: 1px solid red */
+    border: 1px solid red
 }
 
 .link-col {

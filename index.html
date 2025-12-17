@@ -12,41 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main>
-      <div class="title-container">
-        <img class="cropped-image" src="dane.jpeg" alt="Dane at the Grand Canyon"/>
-        <h1>Dane Dathrego</h1>
-        <div class="link-row">
-          <a href="https://www.linkedin.com/in/danedathrego" target="_blank">
-          <div class="link-col">
-            <section class="link-item">
-                <img width="24" height="24" src="/svg/linkedin-svgrepo-com.svg" alt="LinkedIn"/>
-            </section>
-          </div>
-          </a>
-          <a href="DathregoDaneResume.pdf" target="_blank">
-          <div class="link-col">
-            <div class="link-item">
-                <img width="24" height="24" src="/svg/doc-svgrepo-com.svg" alt="Resume"/>
-              </div>
-          </div>
-          </a>
-          <a href="mailto:d.a.dathrego@gmail.com" target="_blank">
-          <div class="link-col">
-            <div class="link-item">
-                <img width="24" height="24" src="/svg/email-svgrepo-com.svg" alt="Email"/>
-            </div>
-          </div>
-          </a>
-          <a href="https://github.com/ddathreg" target="_blank">
-          <div class="link-col">
-            <div class="link-item">
-                <img width="24" height="24" src="/svg/icons8-github.svg" alt="GitHub"/>
-            </div>
-          </div>
-          </a>
-        </div>
-      </div>
-    </main>
+    <ul class="navbar">
+      <li class="navbar-item"><a href="/">Home</a></li>
+      <li class="navbar-item"><a href="/about">About</a></li>
+    </ul>
+    <main id="app" class="page-container"></main>
+    <script src="router.js"></script>
   </body>
 </html>
