@@ -6,6 +6,7 @@ const navigateTo = url => {
 const routes = [
     { path: "/", view: "/pages/home.html" },
     { path: "/about", view: "/pages/about.html" },
+    { path: "/contact", view: "/pages/contact.html" },
 ];
 
 const matchRoute = () => {
