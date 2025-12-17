@@ -63,6 +63,7 @@ body {
     align-items: center;
     padding-bottom: 20px;
     /* border: 1px solid yellow; */
+    margin-bottom: 50px
 }
 
 .cropped-image {
@@ -124,6 +125,7 @@ img {
     align-items: stretch;
     padding-bottom: 20px;
     font-family: "Montserrat", Helvetica, sans-serif;
+    margin-bottom: 50px;
 }
 
 #contact-me {
