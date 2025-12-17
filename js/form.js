@@ -1,3 +1,4 @@
+console.log("form.js loaded");
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
 
