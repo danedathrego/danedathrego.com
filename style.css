@@ -11,7 +11,7 @@ body {
     color: rgb(230, 255, 230);
     min-height: 100dvh;
     height: 100dvh;
-    border: 1px solid red
+    border: 1px solid red;
 }
 
 .page-container {
@@ -19,11 +19,12 @@ body {
     justify-content: center;
     align-items: flex-start;
 
-    min-height: calc(100svh - 60px);
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    min-height: 95dvh;
+    margin: 0;
+    padding: 0;
 
     text-align: center;
+    border: 1px solid white;
 }
 
 
@@ -66,9 +67,15 @@ body {
     justify-content: center;
     align-items: center;
 
-    height: calc(100svh - 60px);
-    overflow: hidden;
+    width: 100dvw;                /* full viewport width */
+    height: 95dvh;              /* full stable viewport height */
+
+    overflow: hidden;            /* hide any tiny extra scroll */
+    margin: 0;
+    padding: 0;
+    border: 1px solid green;
 }
+
 
 
 .about-container {
