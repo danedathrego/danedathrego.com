@@ -140,7 +140,7 @@ p {
     text-align: center;
 }
 
-.about-container {
+.about-text {
     /* border: 1px solid red; */
     align-items: center;
     justify-content: center;
@@ -157,6 +157,7 @@ p {
 /* FORM STUFF */
 
 .contact-container {
+    margin-top: 25dvh;
     width: 90%;
     max-width: 600px;
     display: flex;
