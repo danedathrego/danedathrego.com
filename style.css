@@ -62,8 +62,21 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     margin-bottom: 50px
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding: 0 1rem 2rem;
 }
 
 .cropped-image {
