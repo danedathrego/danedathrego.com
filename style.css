@@ -74,6 +74,10 @@ body {
     /* border: 1px solid green; */
 }
 
+.home-main {
+    padding-bottom: 10dvh;
+}
+
 
 .about-container {
     margin-top: 10dvw;
